@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan & reservasi Acara - Merempah</title>
+    <meta name="description" content="Hadirkan sajian otentik Merempah untuk rapat, acara spesial, atau momen penting Anda. Rancang pesanan Anda dengan mudah melalui kalkulator interaktif kami.">
+    
+    <!-- Google Fonts, Font Awesome, dan Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- PERBAIKAN PERFORMA: Swiper.js dihapus karena tidak digunakan di halaman ini -->
+
+    <!-- JavaScript dengan Defer -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+   <!-- START Component: Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">MEREMPAH</a>
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="cerita-kami.html" class="navbar__link">Cerita Kami</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="other-product.html" class="navbar__link">Produk Retail</a></li>
+                    <li class="navbar__item"><a href="peluang-kemitraan.html" class="navbar__link">Kemitraan</a></li>
+                    <!-- PERBAIKAN NAVIGASI: Teks link diseragamkan dan kelas .navbar__link--active dipindahkan ke sini -->
+                    <li class="navbar__item"><a href="order-reservasi.html" class="navbar__link navbar__link--active">Order & Reservasi</a></li>
+					<li class="navbar__item"><a href="kontak.html" class="navbar__link">Kontak</a></li>
+				</ul>
+                <button class="navbar__hamburger" aria-label="Buka menu">
+					<span class="navbar__hamburger-bar"></span>
+					<span class="navbar__hamburger-bar"></span>
+					<span class="navbar__hamburger-bar"></span>
+				</button>
+            </nav>
+        </div>
+    </header>
+    <!-- END Component: Header -->
+	
+	    <main>
+        <!-- Page Hero Section -->
+        <section class="page-hero" style="background-image: url('assets/images/page-assets/catering-hero.jpg');">
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content">
+                <h1 class="page-hero__title">Hadirkan Merempah di Momen Anda</h1>
+                <p class="page-hero__subtitle">Dari rapat kerja hingga hari bahagia, sajikan pengalaman otentik yang tak terlupakan.</p>
+            </div>
+        </section>
+
+        <!-- Why Us Section (BARU - Membangun Kepercayaan) -->
+        <section class="why-us section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Mengapa Merempah untuk Momen Anda?</h2>
+                </div>
+                <div class="why-us__grid">
+                    <div class="why-us__item">
+                        <div class="why-us__icon"><i class="fas fa-leaf"></i></div>
+                        <h3 class="why-us__title">Sajian Otentik & Sehat</h3>
+                        <p>Buat kesan mendalam dengan minuman rempah asli dan makanan sehat yang tidak akan ditemukan di tempat lain.</p>
+                    </div>
+                    <div class="why-us__item">
+                        <div class="why-us__icon"><i class="fas fa-star"></i></div>
+                        <h3 class="why-us__title">Pengalaman Premium</h3>
+                        <p>Dari penyajian yang berkelas hingga pelayanan profesional, tim kami memastikan setiap detail acara Anda sempurna.</p>
+                    </div>
+                    <div class="why-us__item">
+                        <div class="why-us__icon"><i class="fas fa-handshake"></i></div>
+                        <h3 class="why-us__title">Fleksibel & Terpercaya</h3>
+                        <p>Kami siap membantu merancang paket yang sesuai dengan kebutuhan dan anggaran acara Anda, besar maupun kecil.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section (BARU - Bukti Sosial) -->
+        <section class="catering-testimonial section section--dark">
+            <div class="container">
+                <div class="testimonial-card--catering">
+                    <p class="testimonial-card__quote">"reservasi Merempah jadi primadona di acara kantor kami. STMJ-nya bikin semua melek dan fokus selama meeting. Pelayanannya sangat profesional dan tepat waktu. Recommended!"</p>
+                    <div class="testimonial-card__author">
+                        <!-- PERBAIKAN: Path gambar sudah dipastikan benar -->
+                        <img src="assets/images/testimonials/avatar-budi.jpg" alt="Avatar Budi" class="testimonial-card__avatar">
+                        <div>
+                            <h4 class="testimonial-card__name">Budi Santoso</h4>
+                            <span class="testimonial-card__info">Event Organizer, Startup Malang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		        <!-- Order Wizard Section (BARU - Menggantikan formulir tunggal) -->
+        <section class="order-wizard section">
+            <div class="container container--narrow">
+                <!-- Stepper Navigation -->
+                <div class="stepper">
+                    <div class="step-item active" data-step="1">
+                        <div class="step-counter">1</div>
+                        <div class="step-name">Pilih Layanan</div>
+                    </div>
+                    <div class="step-item" data-step="2">
+                        <div class="step-counter">2</div>
+                        <div class="step-name">Rancang Sajian</div>
+                    </div>
+                    <div class="step-item" data-step="3">
+                        <div class="step-counter">3</div>
+                        <div class="step-name">Detail & Kirim</div>
+                    </div>
+                </div>
+
+                <!-- Stepper Content -->
+                <form id="order-stepper-form">
+                    <!-- LANGKAH 1: PILIH JENIS LAYANAN -->
+                    <fieldset class="step active" id="step-1">
+                        <div class="section__header">
+                            <h2 class="step__title">Bagaimana Kami Bisa Membantu?</h2>
+                            <p>Pilih jenis layanan yang paling sesuai dengan kebutuhan Anda.</p>
+                        </div>
+                        
+                        <div class="service-choice__wrapper">
+                            <!-- Option 1: Pre-order -->
+                            <div class="service-choice__option">
+                                <input type="radio" id="choice-preorder" name="service_type" value="preorder" class="service-choice__input" checked>
+                                <label for="choice-preorder" class="service-choice__card">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <h3>Pesan Ambil di Tempat</h3>
+                                    <p>Pesan di muka, ambil di outlet. Min. 10 pack, harga normal.</p>
+                                </label>
+                            </div>
+
+                            <!-- Option 2: Reservasi -->
+                            <div class="service-choice__option">
+                                <!-- PERBAIKAN LOGIKA: Mengubah value menjadi "reservasi" -->
+                                <input type="radio" id="choice-reservasi" name="service_type" value="reservasi" class="service-choice__input">
+                                <label for="choice-reservasi" class="service-choice__card">
+                                    <i class="fas fa-concierge-bell"></i>
+                                    <h3>Layanan Reservasi Acara</h3>
+                                    <p>Untuk meeting, pernikahan, atau acara lainnya. Dapatkan harga spesial.</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tabel Harga Reservasi (Muncul secara dinamis) -->
+                        <!-- PERBAIKAN LOGIKA: Mengubah ID agar konsisten -->
+                        <div id="reservasi-price-info" class="catering-price-info" style="display: none;">
+                            <h4 class="catering-price-info__title">Struktur Harga Spesial Reservasi</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Jumlah Pesanan</th>
+                                        <th>Harga per Pack*</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>100 - 199 Packs</td>
+                                        <td>Rp 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200 - 299 Packs</td>
+                                        <td>Rp 14.000</td>
+                                    </tr>
+                                     <tr>
+                                        <td>300+ Packs</td>
+                                        <td>Rp 12.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <small>*Harga berlaku untuk semua item menu saat memilih layanan reservasi. Sudah termasuk Free Booth & SDM untuk pesanan di atas 200 pack.</small>
+                        </div>
+
+                        <div class="step__navigation">
+                            <!-- PERBAIKAN FUNGSI: Menambahkan kelas .next-step-btn -->
+                            <button type="button" class="btn btn--primary next-step-btn">Lanjutkan ke Rancang Sajian</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- LANGKAH 2: RANCANG SAJIAN ANDA -->
+                    <fieldset class="step" id="step-2">
+                        <div class="section__header">
+                            <h2 class="step__title">Rancang Sajian Anda</h2>
+                        </div>
+
+                        <!-- Popular Packages Section (BARU) -->
+                        <div class="popular-packages">
+                            <h3 class="popular-packages__title">Atau, Mulai dengan Paket Populer Kami</h3>
+                            <div class="packages-grid">
+                                <!-- Paket 1 -->
+                                <div class="package-card" data-package="rapat-pagi">
+                                    <h4 class="package-card__title">Paket Rapat Pagi</h4>
+                                    <p class="package-card__items">STMJ Authentic (15x)<br>Tempe Mendoan (15x)</p>
+                                    <button type="button" class="btn btn--secondary btn--sm">Pilih Paket Ini</button>
+                                </div>
+                                <!-- Paket 2 -->
+                                <div class="package-card" data-package="lembur-produktif">
+                                    <h4 class="package-card__title">Paket Lembur Produktif</h4>
+                                    <p class="package-card__items">Wedang Uwuh (10x)<br>Singkong Keju (10x)</p>
+                                    <button type="button" class="btn btn--secondary btn--sm">Pilih Paket Ini</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Order Builder & Calculator Grid -->
+                        <div class="order-builder__grid">
+                            <!-- Kolom Kiri: Pembangun Pesanan -->
+                            <div id="order-form-builder" class="order-form-builder">
+                                <h3 class="order-form-builder__title">Rakit Pesanan Sendiri</h3>
+                                <div id="order-items-wrapper">
+                                    <!-- Initial order item row (akan diisi oleh JS dari menu.json) -->
+                                    <div class="order-item">
+                                        <select name="menu_item" class="order-item__select form__input">
+                                            <option value="" disabled selected>-- Pilih Menu --</option>
+                                            <!-- Opsi akan di-generate oleh JavaScript -->
+                                        </select>
+                                        <input type="number" name="menu_quantity" class="order-item__quantity form__input" value="10" min="1" placeholder="Jumlah">
+                                        <button type="button" class="order-item__remove-btn" aria-label="Hapus item">&times;</button>
+                                    </div>
+                                </div>
+
+                                <button type="button" id="add-item-btn" class="btn btn--secondary">
+                                    <i class="fas fa-plus"></i> Tambah Item Lain
+                                </button>
+                                
+                                <!-- Visual Menu Picker Trigger (Modal) -->
+                                <p class="visual-picker-info">
+                                    Atau, pilih dari <a href="#" id="open-visual-picker">menu visual kami</a>.
+                                </p>
+
+                            </div>
+
+                            <!-- Kolom Kanan: Kalkulator / Ringkasan -->
+                            <aside id="order-summary" class="order-summary">
+                                <h3 class="order-summary__title">Ringkasan Pesanan</h3>
+                                <div class="summary-line">
+                                    <span>Total Pack:</span>
+                                    <span id="summary-total-packs" class="summary-value">0</span>
+                                </div>
+                                <div class="summary-line">
+                                    <span>Harga per Pack:</span>
+                                    <span id="summary-price-per-pack" class="summary-value">Rp 0</span>
+                                </div>
+                                <hr class="summary-divider">
+                                <div class="summary-line summary-line--total">
+                                    <span>Estimasi Total:</span>
+                                    <span id="summary-grand-total" class="summary-value">Rp 0</span>
+                                </div>
+                                <p id="summary-notes" class="summary-notes"></p>
+                            </aside>
+                        </div>
+
+                        <div class="step__navigation">
+                            <button type="button" class="btn btn--secondary prev-step-btn">Kembali</button>
+                            <button type="button" class="btn btn--primary next-step-btn">Lanjutkan ke Detail</button>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- LANGKAH 3: DETAIL & KIRIM -->
+                    <fieldset class="step" id="step-3">
+                        <div class="section__header">
+                            <h2 class="step__title">Satu Langkah Terakhir...</h2>
+                            <p>Lengkapi detail di bawah ini. Tim kami akan segera menghubungi Anda melalui WhatsApp untuk konfirmasi akhir dan detail pembayaran.</p>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" id="customer-name" name="customer_name" class="form__input" placeholder="Nama Lengkap Anda" required>
+                            <label for="customer-name" class="form__label">Nama Lengkap Anda</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" id="customer-whatsapp" name="customer_whatsapp" class="form__input" placeholder="Nomor WhatsApp Aktif" required>
+                            <label for="customer-whatsapp" class="form__label">Nomor WhatsApp Aktif</label>
+                        </div>
+
+                        <!-- Fields specific to reservasi, hidden by default -->
+                        <!-- PERBAIKAN LOGIKA: Mengubah ID agar konsisten -->
+                        <div id="reservasi-fields" style="display: none;">
+                             <div class="form__group">
+                                <input type="date" id="event-date" name="event_date" class="form__input" placeholder=" ">
+                                <label for="event-date" class="form__label">Tanggal Acara</label>
+                            </div>
+                            <div class="form__group">
+                                <textarea id="event-address" name="event_address" class="form__input" placeholder="Alamat Lengkap Acara" rows="3"></textarea>
+                                <label for="event-address" class="form__label">Alamat Lengkap Acara</label>
+                            </div>
+                        </div>
+                        <!-- End of reservasi-specific fields -->
+                        
+                        <div class="step__navigation">
+                             <button type="button" class="btn btn--secondary prev-step-btn">Kembali</button>
+                            <button type="submit" class="btn btn--primary form__submit-btn">Kirim Permintaan Pesanan</button>
+                        </div>
+                    </fieldset>
+
+                </form> <!-- Penutup #order-stepper-form -->
+            </div> <!-- Penutup .container -->
+        </section> <!-- Penutup .order-wizard -->
+		
+		        <!-- Modal for Visual Menu Picker (BARU) -->
+        <div id="visual-picker-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <button id="close-visual-picker" class="modal-close-btn">&times;</button>
+                <h3 class="modal-title">Pilih Sajian dari Menu Visual</h3>
+                <div id="visual-picker-grid" class="visual-picker-grid">
+                    <!-- Kartu-kartu menu akan di-generate oleh JavaScript di sini -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section (BARU - Menjawab Keraguan) -->
+        <section class="faq section section--dark">
+            <div class="container container--narrow">
+                <div class="section__header">
+                    <h2 class="section__title">Yang Sering Ditanyakan</h2>
+                </div>
+                <div class="faq-accordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span>Berapa minimal pemesanan untuk reservasi?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Untuk mendapatkan harga spesial reservasi, minimal pemesanan adalah 100 pack. Untuk layanan Pesan Ambil di Tempat, minimal pemesanan adalah 10 pack.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span>Apakah harga sudah termasuk biaya pengiriman?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Harga yang tertera belum termasuk biaya pengiriman. Biaya pengiriman akan diinformasikan oleh tim kami saat konfirmasi pesanan via WhatsApp, tergantung pada jarak lokasi acara Anda.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span>Bagaimana proses pembayarannya?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Setelah Anda mengirimkan permintaan pesanan, tim kami akan menghubungi Anda untuk konfirmasi akhir dan mengirimkan total tagihan beserta detail rekening untuk pembayaran. Diperlukan uang muka (DP) sebesar 50% untuk mengunci jadwal pesanan Anda.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span>Kapan waktu paling lambat untuk memesan?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Untuk pesanan reservasi di atas 100 pack, kami sarankan untuk melakukan pemesanan paling lambat H-3 (tiga hari sebelum) acara. Untuk pesanan di bawah itu, pemesanan H-1 masih memungkinkan tergantung ketersediaan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- START Component: Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Merempah. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <!-- END Component: Footer -->
+    
+</body>
+</html>

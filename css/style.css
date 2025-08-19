@@ -1,0 +1,1628 @@
+/* =============================================
+   STYLE.CSS - MEREMPAH WEBSITE V2.0
+   Pilar I, Bagian 1: Fondasi Global & Tipografi
+   ============================================= */
+
+/* ------------------------------------------
+   1. CSS Variables (Root) & Global Resets
+   ------------------------------------------ */
+
+:root {
+    /* -- Palet Warisan Alami -- */
+    --color-primary: #143720; /* Heritage Green */
+    --color-accent: #cdc77e;  /* Earthy Gold */
+    --color-background-light: #F7F6F1; /* Ivory White */
+    --color-text-light: #F7F6F1;
+    --color-text-dark: #1A1A1A;   /* Arang Black */
+
+    /* -- Tipografi & Layout -- */
+    --font-primary: 'Lora', serif;
+    --font-secondary: 'Lato', sans-serif;
+    --header-height: 80px;
+    --transition-speed: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* 1rem = 16px */
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ------------------------------------------
+   2. Tipografi & Gaya Teks Dasar
+   ------------------------------------------ */
+
+h1, h2, h3, h4 {
+    font-family: var(--font-primary);
+    line-height: 1.3;
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ------------------------------------------
+   3. Reusable Utility & Layout Classes
+   ------------------------------------------ */
+   
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.container--narrow {
+    max-width: 800px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.section--dark {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* Judul di section gelap warnanya harus terang */
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+    color: var(--color-text-light);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section__header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section__title {
+    text-align: center;
+}
+
+/* =============================================
+   Pilar I, Bagian 2: Komponen Global
+   ============================================= */
+
+/* ------------------------------------------
+   4. Header & Navigation
+   ------------------------------------------ */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    z-index: 1000;
+    height: var(--header-height);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar__logo {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__link {
+    color: var(--color-text-light);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Efek garis bawah saat hover */
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-speed);
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+    transform: scaleX(1);
+}
+
+/* Hamburger disembunyikan di desktop */
+.navbar__hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navbar__hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--color-text-light);
+    transition: var(--transition-speed);
+}
+
+/* ------------------------------------------
+   5. Tombol (Buttons)
+   ------------------------------------------ */
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    transition: var(--transition-speed);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-text-dark);
+}
+
+/* PERBAIKAN: Menambahkan state :focus untuk aksesibilitas */
+.btn--primary:hover,
+.btn--primary:focus {
+    background-color: transparent;
+    color: var(--color-accent);
+    outline: none; /* Menghilangkan outline default saat focus */
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* PERBAIKAN: Menambahkan state :focus untuk aksesibilitas */
+.btn--secondary:hover,
+.btn--secondary:focus {
+    background-color: var(--color-accent);
+    color: var(--color-text-dark);
+    outline: none; /* Menghilangkan outline default saat focus */
+}
+
+/* Modifier untuk tombol di section gelap */
+.section--dark .btn--secondary:hover,
+.section--dark .btn--secondary:focus {
+    color: var(--color-text-dark);
+}
+
+
+/* ------------------------------------------
+   6. Footer & Global Elements
+   ------------------------------------------ */
+   
+.footer {
+    background-color: var(--color-primary);
+    color: rgba(247, 246, 241, 0.7); /* Ivory White dengan sedikit transparansi */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.sticky-cta {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Warna khas WhatsApp */
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform var(--transition-speed);
+    z-index: 999;
+}
+
+.sticky-cta:hover {
+    transform: scale(1.1);
+}
+
+/* =============================================
+   Pilar I, Bagian 3: Styling Halaman Utama
+   ============================================= */
+
+/* ------------------------------------------
+   7. Hero & Page Hero Sections
+   ------------------------------------------ */
+
+/* Gaya untuk Hero Section dengan Video */
+.hero {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-light);
+    overflow: hidden;
+}
+
+.hero__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 55, 32, 0.7);
+    z-index: 2;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 1.5rem;
+}
+
+.hero__title {
+    color: var(--color-text-light);
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(247, 246, 241, 0.9);
+}
+
+.hero__cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero__scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, -15px);
+    }
+    60% {
+        transform: translate(-50%, -5px);
+    }
+}
+
+/* Gaya untuk Page Hero generik (digunakan di halaman lain) */
+.page-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-light);
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1.5rem;
+}
+
+.page-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 55, 32, 0.6);
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero__title {
+    color: var(--color-text-light);
+    font-size: 3rem;
+}
+
+.page-hero__subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-top: 0.5rem;
+}
+
+/* ------------------------------------------
+   8. Section Specific Styles for index.html
+   ------------------------------------------ */
+
+/* --- Compromise / Dilemma --- */
+.compromise__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.compromise__image img {
+    border-radius: 6px;
+}
+
+/* --- Solution / Parallax --- */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* PERBAIKAN: Melengkapi dan memperbaiki bagian kode CSS yang hilang */
+.solution__text-box {
+    background-color: rgba(20, 55, 32, 0.85);
+    padding: 3rem;
+    border-radius: 6px;
+    color: var(--color-text-light);
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.solution__text-box .section__title {
+    color: var(--color-accent); /* Judul di dalam box ini menggunakan warna aksen */
+}
+/* AKHIR DARI PERBAIKAN */
+
+
+/* --- Promo --- */
+.promo__grid {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.promo__image-wrapper img {
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo__label {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+.promo__title {
+    color: var(--color-text-light); /* Di section gelap, judul utama terang */
+    font-size: 2.2rem;
+    margin: 0.5rem 0 1rem;
+}
+
+/* --- Offerings / Product Card --- */
+.offerings__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    text-align: center;
+}
+
+/* PERBAIKAN: Menambahkan state :hover untuk interaktivitas */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(20, 55, 32, 0.1);
+}
+
+.product-card__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card__body {
+    padding: 1.5rem;
+}
+
+.product-card__title {
+    font-size: 1.25rem;
+    color: var(--color-text-dark);
+}
+
+.offerings__cta {
+    text-align: center;
+}
+
+/* --- Location Snippet --- */
+.location-snippet .section__header p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* =============================================
+   Pilar I, Bagian 4: Styling Halaman Cerita Kami
+   ============================================= */
+
+/* ------------------------------------------
+   9. Section Specific Styles for cerita-kami.html
+   ------------------------------------------ */
+
+/* --- Story Section --- */
+.story__pull-quote {
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    text-align: center;
+    margin: 3rem 0;
+    border: none;
+    padding: 0;
+}
+
+/* --- Promise Section (Visi & Misi) --- */
+.promise__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; /* Memberi jarak antar janji */
+}
+
+.promise__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Membalik urutan untuk item kedua */
+.promise__item--reverse .promise__image {
+    order: 2;
+}
+
+.promise__image {
+    border-radius: 6px;
+    width: 100%;
+}
+
+.promise__title {
+    margin-bottom: 1rem;
+}
+
+/* --- Values Section --- */
+.values__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.value-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Sedikit highlight di latar gelap */
+    padding: 2.5rem 2rem;
+    border-radius: 6px;
+}
+
+.value-card__icon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+.value-card__title {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.value-card__text {
+    color: rgba(247, 246, 241, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* --- Founders Section --- */
+.founders__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.founder-card__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border: 5px solid var(--color-accent);
+}
+
+.founder-card__name {
+    font-size: 1.5rem;
+}
+
+.founder-card__title {
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.founder-card__quote {
+    font-family: var(--font-primary);
+    font-style: italic;
+    border: none;
+    padding: 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* --- Story CTA Section --- */
+.story-cta .section__title {
+    color: var(--color-accent);
+}
+
+.story-cta p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================================
+   Pilar I, Bagian 5a: Styling Halaman Menu
+   =================================================== */
+
+/* ------------------------------------------
+   10. Section Specific Styles for menu.html
+   ------------------------------------------ */
+
+/* --- Menu Filter --- */
+.menu-filter {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-filter__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.menu-filter__button {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px; /* Membuat bentuk pil */
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-speed);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.menu-filter__button:hover, 
+.menu-filter__button.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* --- Menu Grid Section --- */
+.menu-grid-section {
+    padding-top: 4rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+/* --- Visual Menu Item Card --- */
+.menu-item-card--visual {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: box-shadow var(--transition-speed);
+}
+/* PERBAIKAN: Menambahkan state :hover untuk interaktivitas */
+.menu-item-card--visual:hover {
+     box-shadow: 0 8px 30px rgba(20, 55, 32, 0.12);
+}
+
+.menu-item-card__image {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+}
+
+.menu-item-card__body {
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-card__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-card__name {
+    font-size: 1.2rem;
+    margin: 0;
+    flex-grow: 1; /* Mendorong harga ke kanan */
+}
+
+.menu-item-card__price {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+}
+
+.menu-item-card__badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background-color: var(--color-accent);
+    color: var(--color-text-dark);
+    order: -1; /* Tampil sebelum nama menu */
+    flex-basis: 100%; /* Badge mengambil satu baris penuh jika perlu */
+}
+.menu-item-card__badge i {
+    margin-right: 0.3rem;
+}
+
+
+.menu-item-card__description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- Recommendation Spotlight --- */
+.recommendation__grid {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.recommendation__label {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+.recommendation__title {
+    color: var(--color-text-light);
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+}
+
+.recommendation__narrative {
+    margin-top: 1rem;
+    color: rgba(247, 246, 241, 0.9);
+}
+
+.recommendation__image-wrapper img {
+    border-radius: 6px;
+}
+
+/* ===================================================
+   Pilar I, Bagian 5b: Styling Halaman Produk Retail
+   =================================================== */
+
+/* -------------------------------------------------
+   11. Section Specific Styles for other-product.html
+   ------------------------------------------------- */
+
+/* --- Philosophy Section --- */
+.philosophy.section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.philosophy .section__title {
+    margin-bottom: 1.5rem;
+}
+
+/* --- Retail Showcase & Product Grid --- */
+.retail-showcase {
+    padding-top: 4rem;
+}
+.retail-product {
+    margin-bottom: 6rem;
+}
+.retail-product:last-of-type {
+    margin-bottom: 0;
+}
+
+.retail-product__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Membalik urutan untuk item 'reverse' */
+.retail-product--reverse .retail-product__gallery {
+    order: 2;
+}
+
+/* --- Product Gallery (Swiper Placeholder) --- */
+.retail-product__gallery {
+    /* Gaya untuk Swiper akan ditambahkan nanti atau oleh library-nya langsung */
+    /* Untuk saat ini, kita berikan placeholder */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Product Details --- */
+.retail-product__label {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+}
+
+.retail-product__name {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin: 0.5rem 0 1rem;
+}
+
+.retail-product__features {
+    margin: 1.5rem 0;
+    padding-left: 0.5rem; /* Sedikit indentasi */
+}
+
+.retail-product__features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.retail-product__features i {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+.retail-product__cta-group {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- Testimonials Section (di halaman retail) --- */
+.testimonials.section {
+    padding: 6rem 0;
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: var(--color-primary); /* Latar belakang gelap untuk kontras */
+    padding: 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card__quote {
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    flex-grow: 1; /* Mendorong author ke bawah */
+    margin-bottom: 2rem;
+}
+
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-card__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-card__name {
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.testimonial-card__info {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+/* --- Final CTA Section --- */
+.final-cta.section {
+    padding-top: 6rem;
+}
+
+.final-cta p {
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+/* ===================================================
+   Pilar I, Bagian 5c: Styling Halaman Kemitraan
+   =================================================== */
+
+/* -------------------------------------------------
+   12. Section Specific Styles for peluang-kemitraan.html
+   ------------------------------------------------- */
+
+/* --- Founders' Invitation Section --- */
+.founders-invitation {
+    text-align: center;
+}
+.founders-invitation__photos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.founders-invitation__photos img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-background-light);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.founders-invitation__text {
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.founders-invitation__signature {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* --- Opportunity Infographics --- */
+.infographics__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+.infographic-card {
+    padding: 2rem;
+}
+.infographic-card__icon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+.infographic-card__value {
+    font-family: var(--font-primary);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+.infographic-card__title {
+    color: var(--color-text-light);
+    margin: 0.5rem 0;
+}
+.infographic-card__text {
+    color: rgba(247, 246, 241, 0.8);
+    font-size: 0.9rem;
+}
+
+/* --- Proven Model Section --- */
+.proven-model__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.metric-item {
+    margin-bottom: 2rem;
+}
+.metric-item:last-child {
+    margin-bottom: 0;
+}
+.metric-item__value {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    color: var(--color-accent);
+    line-height: 1;
+}
+.metric-item__label {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+.metric-item__desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* --- Partnership Support Timeline --- */
+.support-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.support-timeline::before { /* Garis vertikal timeline */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    width: 4px;
+    background: #e9e9e9;
+}
+.timeline-step {
+    position: relative;
+    padding-left: 80px; /* Jarak dari garis */
+    margin-bottom: 3rem;
+}
+.timeline-step:last-child {
+    margin-bottom: 0;
+}
+.timeline-step__number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid var(--color-background-light);
+    box-shadow: 0 0 0 4px var(--color-primary);
+}
+.timeline-step__title {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Partnership Form --- */
+.form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.form__group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form__group--full-width {
+    grid-column: 1 / -1;
+}
+.form__input, textarea.form__input, select.form__input {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-background-light);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    transition: var(--transition-speed);
+    font-family: var(--font-secondary);
+}
+.form__input:focus, textarea.form__input:focus, select.form__input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(205, 199, 126, 0.3);
+}
+/* Placeholder and Label styling for Floating Label Effect */
+.form__label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #777;
+    pointer-events: none;
+    transition: var(--transition-speed);
+    background-color: var(--color-background-light);
+    padding: 0 0.5rem;
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    top: -0.75rem;
+    left: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+/* For Select and Textarea, ensures the label floats correctly */
+select.form__input + .form__label,
+textarea.form__input:focus + .form__label,
+textarea.form__input:not(:placeholder-shown) + .form__label {
+    top: -0.75rem;
+    left: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+select.form__input:required:invalid {
+    color: #777;
+}
+select option {
+    color: var(--color-text-dark);
+}
+.form__submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* ===================================================
+   Pilar I, Bagian 5d: Styling Halaman Order & reservasi
+   =================================================== */
+
+/* -------------------------------------------------
+   13. Section Specific Styles for order-reservasi.html
+   ------------------------------------------------- */
+
+/* --- Why Us Section --- */
+.why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+.why-us__icon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+.why-us__title {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Catering Testimonial --- */
+.testimonial-card--catering {
+    background-color: var(--color-primary);
+    padding: 3rem;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.testimonial-card--catering .testimonial-card__quote {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.testimonial-card--catering .testimonial-card__author {
+    justify-content: center; /* Pusatkan author */
+    border-top: none;
+    padding-top: 0;
+}
+
+/* --- Order Wizard Stepper --- */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #aaa;
+}
+.step-counter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    transition: var(--transition-speed);
+}
+.step-name {
+    font-weight: 700;
+}
+.step-item.active {
+    color: var(--color-primary);
+}
+.step-item.active .step-counter {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+/* --- Step Content --- */
+.step {
+    display: none; /* Sembunyikan semua langkah secara default */
+}
+.step.active {
+    display: block; /* Tampilkan hanya langkah yang aktif */
+}
+.step__title {
+    margin-bottom: 0.5rem;
+}
+.step__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+/* --- Service Choice & Price Info --- */
+.service-choice__wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.service-choice__input {
+    display: none;
+}
+.service-choice__card {
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+.service-choice__card i {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.service-choice__input:checked + .service-choice__card {
+    border-color: var(--color-primary);
+    box-shadow: 0 5px 20px rgba(20, 55, 32, 0.15);
+    transform: translateY(-5px);
+}
+.catering-price-info {
+    margin-top: 2rem;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+.catering-price-info table {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+.catering-price-info th, .catering-price-info td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Popular Packages --- */
+.popular-packages {
+    margin-bottom: 3rem;
+}
+.popular-packages__title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.package-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+.package-card__title {
+    margin-bottom: 0.75rem;
+}
+.package-card__items {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 1rem;
+}
+.btn--sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* --- Order Builder & Summary --- */
+/* (Gaya dasar untuk form__input sudah ada, kita hanya perlu menata layout) */
+.order-builder__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+.order-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.order-item__select {
+    flex-grow: 1;
+}
+.order-item__quantity {
+    width: 80px;
+    text-align: center;
+}
+.order-item__remove-btn {
+    background: none; border: none; font-size: 1.5rem; color: #999; cursor: pointer;
+}
+.visual-picker-info {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.visual-picker-info a {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.order-summary {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 6px;
+    position: sticky;
+    top: 100px; /* Jarak dari header */
+}
+.summary-line { display: flex; justify-content: space-between; padding: 0.75rem 0; }
+.summary-divider { border: 0; border-top: 1px solid #eee; margin: 1rem 0; }
+.summary-line--total { font-size: 1.2rem; font-weight: 700; }
+.summary-line--total .summary-value { color: var(--color-primary); }
+.summary-notes { font-size: 0.9rem; font-style: italic; color: var(--color-primary); margin-top: 1rem; min-height: 1.2em; }
+
+
+/* --- Modal for Visual Menu Picker --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none; /* Diubah menjadi 'flex' oleh JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.visual-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Atur sesuai kebutuhan */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ===================================================
+   Pilar I, Bagian 5e: Styling Halaman Kontak
+   =================================================== */
+
+/* -------------------------------------------------
+   14. Section Specific Styles for kontak.html
+   ------------------------------------------------- */
+
+/* --- Revamped Location Section --- */
+.location.section--dark {
+    padding: 6rem 0;
+}
+.location__grid--revamped {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch; /* Membuat kedua kolom sama tinggi */
+}
+.location__map iframe {
+    border-radius: 8px;
+    height: 100%;
+    min-height: 500px;
+}
+.location__details-card {
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    padding: 3rem;
+    border-radius: 8px;
+}
+.location__card-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.location__card-intro {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+.location__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.location__info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.location__info-list i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+.location__info-list strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+.location__info-list p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+.location__info-list a {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+.location__info-list small {
+    font-size: 0.8rem;
+    color: #777;
+    font-style: italic;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* --- Gallery Snippet Section --- */
+.gallery-snippet.section {
+    padding-top: 6rem;
+}
+.gallery-snippet__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.gallery-snippet__item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.gallery-snippet__item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+.gallery-snippet__item:hover img {
+    transform: scale(1.05);
+}
+.gallery-snippet__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: #fff;
+    padding: 1.5rem 1rem 1rem;
+    text-align: right;
+    font-weight: 700;
+    font-family: var(--font-primary);
+}
+
+/* --- FAQ Section --- */
+.faq.section--dark .faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.faq.section--dark .faq-item:last-child {
+    border-bottom: none;
+}
+.faq-item__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    color: var(--color-text-light);
+}
+.faq-item__question span {
+    padding-right: 1rem;
+}
+.faq-item__question i {
+    transition: transform var(--transition-speed);
+}
+.faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    color: rgba(247, 246, 241, 0.8);
+}
+.faq-item__answer p {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+}
+/* State untuk JS: Saat .faq-item memiliki class .active */
+.faq-item.active .faq-item__question i {
+    transform: rotate(180deg);
+}
+.faq-item.active .faq-item__answer {
+    max-height: 300px; /* Sesuaikan jika jawaban lebih panjang */
+}

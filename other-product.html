@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Retail - Bawa Pulang Kebaikan Merempah</title>
+    <meta name="description" content="Nikmati kebaikan Merempah di rumah. Jelajahi produk retail premium kami: Kombucha Rempah, Teh Artisan, dan Jamu Kemasan yang diracik sepenuh hati.">
+    
+    <!-- Google Fonts, Font Awesome, dan Stylesheets (Sama seperti sebelumnya) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript dengan Defer -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+   <!-- START Component: Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">MEREMPAH</a>
+                <ul class="navbar__menu">
+                    <!-- Nav items... -->
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="cerita-kami.html" class="navbar__link">Cerita Kami</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="other-product.html" class="navbar__link">Produk Retail</a></li>
+                    <li class="navbar__item"><a href="peluang-kemitraan.html" class="navbar__link">Kemitraan</a></li>
+                    <li class="navbar__item"><a href="order-reservasi.html" class="navbar__link">Order & reservasi</a></li>
+					<li class="navbar__item"><a href="kontak.html" class="navbar__link navbar__link--active">Kontak</a></li>
+				</ul>
+                <button class="navbar__hamburger" aria-label="Buka menu">
+					<span class="navbar__hamburger-bar"></span>
+					<span class="navbar__hamburger-bar"></span> <!-- TYPO SUDAH DIPERBAIKI -->
+					<span class="navbar__hamburger-bar"></span>
+				</button>
+            </nav>
+        </div>
+    </header>
+    <!-- END Component: Header -->
+
+    <main>
+        <!-- Page Hero Section (Dengan Narasi Baru) -->
+        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar latar belakang -->
+        <section class="page-hero" style="background-image: url('assets/images/page-assets/retail-hero-collection.jpg');">
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content">
+                <h1 class="page-hero__title">Bawa Pulang Cerita dan Kebaikan Kami.</h1>
+                <p class="page-hero__subtitle">Nikmati racikan rempah otentik di rumah, atau bagikan sebagai bingkisan penuh makna.</p>
+            </div>
+        </section>
+
+        <!-- Philosophy Section (Jembatan Naratif Baru) -->
+        <section class="philosophy section">
+            <div class="container container--narrow text-center">
+                <h2 class="section__title">Dari Outlet Kami, ke Rumah Anda.</h2>
+                <p>Suka dengan kehangatan dan rasa otentik yang Anda nikmati di outlet kami? Kini, kami telah meracik kebaikan yang sama untuk Anda nikmati di mana saja, kapan saja. Setiap produk retail kami adalah perwujudan filosofi Merempah—100% bahan alami pilihan, tanpa pengawet, dalam kemasan yang modern dan praktis.</p>
+            </div>
+        </section>
+
+                <!-- Retail Showcase Section -->
+        <section class="retail-showcase section">
+            <!-- Product 1: Kombucha -->
+            <div class="retail-product container">
+                <div class="retail-product__grid">
+                    <!-- GAMBAR PRODUK (DIUBAH MENJADI GALERI/SLIDER) -->
+                    <div class="retail-product__gallery">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- PERBAIKAN: Menambahkan 'assets/' pada path semua gambar -->
+                                <div class="swiper-slide"><img src="assets/images/retail-products/retail-kombucha-bottle.jpg" alt="Minuman Kombucha Rempah Merempah dalam botol kaca premium"></div>
+                                <div class="swiper-slide"><img src="assets/images/retail-products/lifestyle-kombucha-pouring.jpg" alt="Kombucha rempah sedang dituang ke dalam gelas dengan es batu"></div>
+                                <div class="swiper-slide"><img src="assets/images/retail-products/detail-scoby-culture.jpg" alt="Close-up kultur SCOBY yang sehat untuk kombucha"></div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <!-- DETAIL PRODUK (DESKRIPSI & CTA BARU) -->
+                    <div class="retail-product__details">
+                        <span class="retail-product__label">Teh Fermentasi Probiotik</span>
+                        <h3 class="retail-product__name">Kombucha Rempah</h3>
+                        <p class="retail-product__description">Minuman teh fermentasi menyegarkan yang kaya probiotik alami. Dipadukan dengan sentuhan rempah khas seperti jahe dan serai, setiap tegukannya memberikan manfaat ganda untuk kesehatan pencernaan dan vitalitas Anda.</p>
+                       <ul class="retail-product__features">
+							<li><i class="fas fa-leaf"></i> 100% Bahan Alami Pilihan</li>
+							<li><i class="fas fa-microbe"></i> Kaya Probiotik & Antioksidan</li> <!-- KELAS IKON SUDAH DIPERBAIKI -->
+							<li><i class="fas fa-wine-bottle"></i> Dikemas dalam Botol Kaca Premium</li>
+						</ul>
+                        <div class="retail-product__cta-group">
+                            <a href="kontak.html#lokasi" class="btn btn--primary">Dapatkan di Outlet Kami</a>
+                            <!-- PERBAIKAN: Menambahkan rel="noopener noreferrer" untuk keamanan -->
+                            <a href="https://api.whatsapp.com/send?phone=628155800557&text=Halo%20Merempah%2C%20saya%20tertarik%20dengan%20produk%20Kombucha%20Rempah." target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Info & Pesan via WA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: Artisan Tea -->
+            <div class="retail-product container retail-product--reverse">
+                <div class="retail-product__grid">
+                    <!-- GAMBAR PRODUK (DIUBAH MENJADI GALERI/SLIDER) -->
+                     <div class="retail-product__gallery">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- PERBAIKAN: Menambahkan 'assets/' pada path semua gambar -->
+                                <div class="swiper-slide"><img src="assets/images/retail-products/retail-teh-artisan-can.jpg" alt="Teh rempah artisan Merempah dalam kemasan kaleng premium yang elegan"></div>
+                                <div class="swiper-slide"><img src="assets/images/retail-products/lifestyle-artisan-tea-brewing.jpg" alt="Teh rempah artisan sedang diseduh dalam teko kaca yang estetik"></div>
+                                <div class="swiper-slide"><img src="assets/images/retail-products/detail-dried-tea-spices.jpg" alt="Close-up daun teh kering dan rempah-rempah pilihan"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <!-- DETAIL PRODUK (DESKRIPSI & CTA BARU) -->
+                    <div class="retail-product__details">
+                        <span class="retail-product__label">Racikan Teh Kering Premium</span>
+                        <h3 class="retail-product__name">Teh Rempah Artisan</h3>
+                        <p class="retail-product__description">Hadirkan ketenangan oase urban kami ke dalam rumah Anda. Setiap seduhan Teh Rempah Artisan adalah ritual relaksasi yang dirancang untuk menenangkan pikiran dan memulihkan energi setelah hari yang sibuk. Sempurna sebagai bingkisan penuh makna.</p>
+                         <ul class="retail-product__features">
+                            <li><i class="fas fa-spa"></i> Aroma Terapi yang Menenangkan</li>
+                            <li><i class="fas fa-box-open"></i> Kemasan Kaleng Premium Kedap Udara</li>
+                            <li><i class="fas fa-gift"></i> Ideal untuk Hadiah & Bingkisan</li>
+                        </ul>
+                        <div class="retail-product__cta-group">
+                            <a href="kontak.html#lokasi" class="btn btn--primary">Dapatkan di Outlet Kami</a>
+                             <!-- PERBAIKAN: Menambahkan rel="noopener noreferrer" untuk keamanan -->
+                             <a href="https://api.whatsapp.com/send?phone=628155800557&text=Halo%20Merempah%2C%20saya%20tertarik%20dengan%20produk%20Teh%20Rempah%20Artisan." target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Info & Pesan via WA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                     <!-- ... Lanjutan dari kode sebelumnya ... -->
+
+            <!-- Product 3: Jamu Kemasan -->
+            <div class="retail-product container">
+                <div class="retail-product__grid">
+                    <!-- GAMBAR PRODUK (DIUBAH MENJADI GALERI/SLIDER) -->
+                    <div class="retail-product__gallery">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- PERBAIKAN: Menambahkan 'assets/' pada path semua gambar -->
+                                <div class="swiper-slide"><img src="assets/images/retail-products/retail-jamu-kemasan-bottle.jpg" alt="Jamu tradisional seperti Beras Kencur dalam kemasan botol praktis siap minum"></div>
+                                <div class="swiper-slide"><img src="assets/images/retail-products/lifestyle-jamu-in-fridge.jpg" alt="Beberapa botol jamu kemasan tersimpan rapi di dalam kulkas"></div>
+                                <div class="swiper-slide"><img src="assets/images/retail-products/detail-turmeric-ginger.jpg" alt="Close-up bahan baku jamu, kunyit dan jahe segar"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <!-- DETAIL PRODUK (DESKRIPSI & CTA BARU) -->
+                    <div class="retail-product__details">
+                        <span class="retail-product__label">Minuman Kesehatan Tradisional</span>
+                        <h3 class="retail-product__name">Jamu Kemasan Siap Minum</h3>
+                        <p class="retail-product__description">Kebaikan resep jamu warisan seperti Beras Kencur dan Kunyit Asam, kini hadir dalam botol siap minum yang praktis. Solusi cepat dan higienis untuk menjaga imunitas dan kesegaran tubuh Anda setiap hari.</p>
+                         <ul class="retail-product__features">
+                            <li><i class="fas fa-history"></i> Resep Warisan Otentik</li>
+                            <li><i class="fas fa-shield-alt"></i> Meningkatkan Imunitas Tubuh</li>
+                            <li><i class="fas fa-hand-holding-medical"></i> Praktis, Higienis & Siap Minum</li>
+                        </ul>
+                         <div class="retail-product__cta-group">
+                            <a href="kontak.html#lokasi" class="btn btn--primary">Dapatkan di Outlet Kami</a>
+                             <!-- PERBAIKAN: Menambahkan rel="noopener noreferrer" untuk keamanan -->
+                             <a href="https://api.whatsapp.com/send?phone=628155800557&text=Halo%20Merempah%2C%20saya%20tertarik%20dengan%20produk%20Jamu%20Kemasan." target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Info & Pesan via WA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- Penutup .retail-showcase -->
+
+        <!-- Testimonials Section (BARU - Membangun Kepercayaan) -->
+        <section class="testimonials section section--dark">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Apa Kata Mereka</h2>
+                    <p>Cerita dari mereka yang telah membawa pulang kebaikan Merempah.</p>
+                </div>
+                <div class="testimonials__grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-card__quote">"Kombucha Rempahnya jadi penyelamat waktu lembur di rumah. Segar, nggak terlalu manis, dan bikin fokus balik lagi. Jauh lebih baik dari minuman energi biasa!"</p>
+                        <div class="testimonial-card__author">
+                            <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                            <img src="assets/images/testimonials/avatar-rian.jpg" alt="Avatar pelanggan" class="testimonial-card__avatar">
+                            <div>
+                                <h4 class="testimonial-card__name">Rian P.</h4>
+                                <span class="testimonial-card__info">Freelance Graphic Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                         <p class="testimonial-card__quote">"Selalu stok Jamu Kemasan di kulkas. Solusi praktis buat jaga imun keluarga, rasanya otentik dan yang terpenting, saya percaya kebersihannya. Anak-anak pun suka."</p>
+                        <div class="testimonial-card__author">
+                            <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                            <img src="assets/images/testimonials/avatar-dewi.jpg" alt="Avatar pelanggan" class="testimonial-card__avatar">
+                            <div>
+                                <h4 class="testimonial-card__name">Dewi Lestari</h4>
+                                <span class="testimonial-card__info">Marketing Manager & Ibu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- ... Lanjutan dari kode sebelumnya ... -->
+
+        <!-- Final CTA Section (BARU) -->
+        <section class="final-cta section">
+            <div class="container text-center">
+                <h2 class="section__title">Siap Membawa Pulang Kebaikan Merempah?</h2>
+                <p>Kunjungi outlet kami untuk melihat koleksi lengkap produk retail dan rasakan langsung filosofi kami dalam setiap sajian. Tim Rempahista kami siap membantu Anda.</p>
+                <a href="kontak.html" class="btn btn--primary">Temukan Outlet Terdekat</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- START Component: Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Merempah. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <!-- END Component: Footer -->
+    
+</body>
+</html>

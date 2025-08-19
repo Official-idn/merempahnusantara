@@ -1,0 +1,220 @@
+/* =============================================
+   RESPONSIVE.CSS - MEREMPAH WEBSITE V2.0
+   Pilar II, Bagian 1: Breakpoint Tablet Besar
+   ============================================= */
+
+/* -----------------------------------------------------------------
+   Breakpoint 1: Tablet Besar & Laptop Kecil (Hingga 1200px)
+   ----------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    
+    /* --- 1. Penyesuaian Global --- */
+    html {
+        font-size: 90%; /* Mengecilkan semua ukuran rem secara proporsional */
+    }
+
+    /* --- 2. Halaman Utama (index.html) --- */
+
+    /* Mengubah grid penawaran dari 4 kolom menjadi 2 kolom */
+    .offerings__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- 3. Halaman Cerita Kami (cerita-kami.html) --- */
+
+    /* Mengubah grid nilai dari 3 kolom menjadi 1 kolom agar lebih fokus */
+    .values__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px; /* Membatasi lebar agar tidak terlalu strerch */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- 4. Halaman Kemitraan (peluang-kemitraan.html) --- */
+
+    /* Mengubah grid infografis dari 3 kolom menjadi 1 kolom */
+    .infographics__grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- 5. Halaman Kontak (kontak.html) --- */
+    
+    /* Mengubah grid galeri dari 4 kolom menjadi 2 kolom */
+    .gallery-snippet__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* -----------------------------------------------------------------
+   Breakpoint 2: Tablet & Mobile (Hingga 768px)
+   ----------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* --- 1. Penyesuaian Global & Tipografi --- */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 4rem 0; /* Mengurangi padding vertikal */
+    }
+
+    /* --- 2. Navigasi & Menu Hamburger --- */
+    .navbar__menu {
+        /* Sembunyikan menu desktop */
+        display: none;
+
+        /* Styling untuk menu mobile (saat aktif) */
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .navbar__menu--active {
+        display: flex; /* JavaScript akan menambahkan kelas ini untuk menampilkan menu */
+    }
+
+    .navbar__hamburger {
+        display: block; /* Tampilkan tombol hamburger */
+    }
+
+    /* --- 3. Halaman Utama (index.html) --- */
+    .compromise__grid,
+    .promo__grid {
+        grid-template-columns: 1fr; /* Ubah semua grid 2 kolom menjadi 1 kolom */
+    }
+    
+    .offerings__grid {
+        grid-template-columns: 1fr; /* Ubah grid produk menjadi 1 kolom */
+    }
+
+    /* --- 4. Halaman Cerita Kami (cerita-kami.html) --- */
+    .promise__item,
+    .promise__item--reverse {
+        grid-template-columns: 1fr;
+    }
+
+    /* Memastikan urutan konsisten: gambar selalu di atas teks */
+    .promise__item--reverse .promise__image {
+        order: 0; 
+    }
+
+    .founders__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* --- 5. Halaman Menu (menu.html) --- */
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recommendation__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- 6. Halaman Produk Retail (other-product.html) --- */
+    .retail-product__grid,
+    .retail-product--reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Memastikan urutan konsisten: gambar selalu di atas teks */
+    .retail-product--reverse .retail-product__gallery {
+        order: 0;
+    }
+    
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* --- 7. Halaman Kemitraan (peluang-kemitraan.html) --- */
+    .proven-model__grid,
+    .form__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- 8. Halaman Order & reservasi (order-reservasi.html) --- */
+    .service-choice__wrapper {
+        flex-direction: column; /* Menumpuk pilihan layanan secara vertikal */
+    }
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    .order-builder__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- 9. Halaman Kontak (kontak.html) --- */
+    .location__grid--revamped {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-snippet__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -----------------------------------------------------------------
+   Breakpoint 3: Mobile Kecil (Hingga 480px)
+   ----------------------------------------------------------------- */
+@media (max-width: 480px) {
+    
+    /* --- 1. Penyesuaian Global & Tipografi --- */
+    html {
+        font-size: 85%; /* Sedikit penyesuaian akhir untuk font */
+    }
+
+    .hero__title, .page-hero__title {
+        font-size: 2.2rem; /* Mengecilkan judul utama */
+    }
+
+    .hero__subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* --- 2. Penyesuaian Komponen --- */
+
+    /* Mengurangi padding pada kartu agar konten lebih lega */
+    .value-card,
+    .testimonial-card,
+    .location__details-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .menu-item-card--visual {
+        flex-direction: column; /* Menumpuk gambar dan teks kartu menu */
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-item-card__body {
+        padding: 1.5rem;
+    }
+
+    .menu-item-card__header {
+        justify-content: center;
+    }
+    
+    .form__submit-btn {
+        width: 100%; /* Tombol submit mengambil lebar penuh */
+        padding: 1.2rem;
+    }
+
+    /* Menyembunyikan CTA sticky di layar sangat kecil agar tidak mengganggu */
+    .sticky-cta {
+        display: none;
+    }
+} 

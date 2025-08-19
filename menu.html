@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu & Sajian - Merempah</title>
+    <meta name="description" content="Jelajahi sajian warisan nusantara dari Merempah. Cicipi STMJ legendaris, Wedang Uwuh otentik, hingga ramuan kebaikan alami yang diracik sepenuh hati.">
+    
+    <!-- Google Fonts, Font Awesome, dan Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript dengan Defer -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+   <!-- START Component: Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">MEREMPAH</a>
+                <ul class="navbar__menu">
+                    <!-- Nav items... -->
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="cerita-kami.html" class="navbar__link">Cerita Kami</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="other-product.html" class="navbar__link">Produk Retail</a></li>
+                    <li class="navbar__item"><a href="peluang-kemitraan.html" class="navbar__link">Kemitraan</a></li>
+                    <li class="navbar__item"><a href="order-reservasi.html" class="navbar__link">Order & reservasi</a></li>
+					<li class="navbar__item"><a href="kontak.html" class="navbar__link navbar__link--active">Kontak</a></li>
+				</ul>
+                <button class="navbar__hamburger" aria-label="Buka menu">
+					<span class="navbar__hamburger-bar"></span>
+					<span class="navbar__hamburger-bar"></span> <!-- TYPO SUDAH DIPERBAIKI -->
+					<span class="navbar__hamburger-bar"></span>
+				</button>
+            </nav>
+        </div>
+    </header>
+    <!-- END Component: Header -->
+
+    <main>
+        <!-- Page Hero Section -->
+        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar latar belakang -->
+        <section class="page-hero" style="background-image: url('assets/images/page-assets/menu-hero-flatlay.jpg');">
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content">
+                <h1 class="page-hero__title">Menu & Sajian Kami</h1>
+                <p class="page-hero__subtitle">Sebuah Perayaan Rasa Otentik dari Kekayaan Rempah Nusantara.</p>
+            </div>
+        </section>
+
+        <!-- Menu Filter Navigation Section (Dengan Kategori Baru) -->
+        <section class="menu-filter section">
+            <div class="container">
+                <div class="menu-filter__wrapper">
+                    <button class="menu-filter__button active" data-filter="all">Tampilkan Semua</button>
+                    <button class="menu-filter__button" data-filter="warisan">Sajian Warisan</button>
+                    <button class="menu-filter__button" data-filter="ramuan">Ramuan Kebaikan</button>
+                    <button class="menu-filter__button" data-filter="kopi">Seduhan Klasik</button>
+                    <button class="menu-filter__button" data-filter="pendamping">Pendamping Setia</button>
+                </div>
+            </div>
+        </section>
+
+                <!-- Interactive Menu Grid Section -->
+        <section class="menu-grid-section section" style="padding-top: 0;">
+            <div class="container">
+                <div class="menu-grid"> <!-- INI ADALAH SATU-SATUNYA PEMBUKA .menu-grid -->
+
+                    <!-- KATEGORI: SAJIAN WARISAN NUSANTARA -->
+                    <div class="menu-item-card--visual" data-category="warisan">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-stmj.jpg" alt="STMJ Authentic disajikan hangat dalam cangkir batok kelapa" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">STMJ Authentic</h4>
+                                <span class="menu-item-card__badge"><i class="fas fa-star"></i> Rempahista's Pick</span>
+                                <span class="menu-item-card__price">Rp 25.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Resep legendaris yang kami jaga keasliannya. Perpaduan susu murni, telur ayam kampung, madu hutan, dan jahe bakar untuk kehangatan dan stamina ekstra.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card--visual" data-category="warisan">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-wedang-uwuh.jpg" alt="Wedang Uwuh dengan rempah-rempah asli berwarna kemerahan" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Wedang Uwuh</h4>
+                                <span class="menu-item-card__price">Rp 20.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Minuman rempah khas keraton dari jahe, secang, dan dedaunan pilihan yang menghangatkan tubuh dan menenangkan jiwa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item-card--visual" data-category="warisan">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-teh-talua.jpg" alt="Teh Talua khas Minang dengan buih tebal yang creamy" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Teh Talua</h4>
+                                <span class="menu-item-card__price">Rp 22.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Kekuatan teh hitam berpadu dengan creamy-nya kuning telur khas Ranah Minang, diracik untuk membangkitkan energi Anda.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card--visual" data-category="warisan">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-bajigur.jpg" alt="Minuman Bajigur hangat dengan aroma pandan yang khas" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Bajigur</h4>
+                                <span class="menu-item-card__price">Rp 18.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Kehangatan santan dan gula aren yang lembut, berpadu dengan aroma pandan dan jahe. Sajian klasik Pasundan untuk momen relaksasi Anda.</p>
+                        </div>
+                    </div>
+
+                    <!-- KATEGORI: RAMUAN KEBAIKAN ALAMI -->
+                    <div class="menu-item-card--visual" data-category="ramuan">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-beras-kencur.jpg" alt="Segelas Beras Kencur dingin yang menyegarkan" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Beras Kencur</h4>
+                                <span class="menu-item-card__price">Rp 15.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Ramuan klasik yang menyegarkan untuk meredakan pegal dan memulihkan vitalitas tubuh setelah beraktivitas seharian.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card--visual" data-category="ramuan">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-sinom.jpg" alt="Segelas Sinom berwarna kuning cerah dengan es batu" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Sinom</h4>
+                                <span class="menu-item-card__price">Rp 15.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Kesegaran daun asam muda dan kunyit, resep warisan yang baik untuk melancarkan peredaran darah dan menjaga pencernaan.</p>
+                        </div>
+                    </div>
+
+                                        <!-- ... Lanjutan dari 6 item menu sebelumnya ... -->
+
+                    <!-- KATEGORI: SEDUHAN KLASIK PENUH INSPIRASI -->
+                    <div class="menu-item-card--visual" data-category="kopi">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/kopi-tubruk-robusta.jpg" alt="Secangkir Kopi Tubruk Robusta hitam pekat" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Kopi Tubruk Robusta</h4>
+                                <span class="menu-item-card__price">Rp 15.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Untuk pencari rasa kopi yang sejati. Sajian kopi hitam pekat dan otentik dengan ampasnya yang khas, menyajikan tendangan energi yang kuat.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card--visual" data-category="kopi">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/kopi-susu-arabika.jpg" alt="Kopi Susu Arabika dengan latte art sederhana" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Kopi Susu Arabika</h4>
+                                <span class="menu-item-card__price">Rp 20.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Perpaduan seimbang antara karakter lembut dari espresso arabika pilihan dengan susu segar, menciptakan rasa yang nyaman di setiap tegukan.</p>
+                        </div>
+                    </div>
+
+                    <!-- KATEGORI: PENDAMPING SETIA DI SETIAP SUASANA -->
+                    <div class="menu-item-card--visual" data-category="pendamping">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/makanan-pecel.jpg" alt="Seporsi Pecel dengan sayuran segar dan bumbu kacang melimpah" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Pecel</h4>
+                                <span class="menu-item-card__price">Rp 18.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Renyahnya aneka sayuran segar pilihan yang disiram dengan bumbu kacang pedas manis yang kaya rasa. Sajian sehat yang mengenyangkan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item-card--visual" data-category="pendamping">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/makanan-tahu-telur.jpg" alt="Tahu Telur khas Jawa Timur dengan saus petis" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Tahu Telur</h4>
+                                <span class="menu-item-card__price">Rp 20.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Perpaduan gurih dari tahu dan telur goreng, disajikan dengan saus petis udang yang khas dan taburan tauge segar yang renyah.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card--visual" data-category="pendamping">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/camilan-tempe-mendoan.jpg" alt="Tempe Mendoan hangat disajikan dengan sambal kecap pedas" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Tempe Mendoan</h4>
+                                <span class="menu-item-card__badge"><i class="fas fa-mug-hot"></i> Teman Sempurna Kopi</span>
+                                <span class="menu-item-card__price">Rp 15.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Tempe goreng tepung yang gurih dan hangat, disajikan langsung dari dapur dengan sambal kecap pedas manis yang menggugah selera.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card--visual" data-category="pendamping">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/camilan-singkong-keju.jpg" alt="Singkong goreng empuk dengan taburan keju melimpah" class="menu-item-card__image" loading="lazy">
+                        <div class="menu-item-card__body">
+                            <div class="menu-item-card__header">
+                                <h4 class="menu-item-card__name">Singkong Keju</h4>
+                                <span class="menu-item-card__price">Rp 18.000</span>
+                            </div>
+                            <p class="menu-item-card__description">Singkong goreng pilihan yang empuk di dalam dan renyah di luar, disajikan dengan taburan keju melimpah dan sentuhan susu kental manis.</p>
+                        </div>
+                    </div>
+
+                </div> <!-- INI ADALAH PENUTUP DARI .menu-grid -->
+            </div> <!-- Penutup .container -->
+        </section> <!-- Penutup .menu-grid-section -->
+
+                <!-- ... Lanjutan dari kode sebelumnya ... -->
+
+        <!-- Recommendation Spotlight Section (Dengan Judul & Narasi Baru) -->
+        <section class="recommendation section section--dark">
+            <div class="container recommendation__grid">
+                <div class="recommendation__image-wrapper">
+                    <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                    <img src="assets/images/menu-items/minuman-stmj.jpg" alt="Foto close-up STMJ Authentic yang hangat dan menggugah selera">
+                </div>
+                <div class="recommendation__text">
+                    <span class="recommendation__label">PILIHAN UTAMA REMPAHISTA</span>
+                    <h2 class="recommendation__title">STMJ Authentic</h2>
+                    <p class="recommendation__narrative">Jika ada satu sajian yang mewakili jiwa Merempah, inilah dia. Resep legendaris yang kami jaga keasliannya, menggunakan bahan baku terbaik dari petani lokal. Rasakan perpaduan sempurna susu murni, telur ayam kampung, madu hutan, dan jahe bakar yang memberikan kehangatan dan stamina, persis seperti yang seharusnya.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- START Component: Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Merempah. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <!-- END Component: Footer -->
+    
+</body>
+</html>

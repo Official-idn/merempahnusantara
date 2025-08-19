@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merempah - Saat Tradisi Bertemu Produktivitas Modern</title>
+    <meta name="description" content="Merempah adalah oase urban 24/7 di Malang. Kami memecahkan kompromi antara kenyamanan kafe modern dan kehangatan otentik warisan minuman rempah nusantara.">
+    
+    <!-- Google Fonts: Lora & Lato (Preconnect untuk performa) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript dengan Defer untuk Performance -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+   <!-- START Component: Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">MEREMPAH</a>
+                <ul class="navbar__menu">
+                    <!-- Nav items... -->
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="cerita-kami.html" class="navbar__link">Cerita Kami</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="other-product.html" class="navbar__link">Produk Retail</a></li>
+                    <li class="navbar__item"><a href="peluang-kemitraan.html" class="navbar__link">Kemitraan</a></li>
+                    <li class="navbar__item"><a href="order-reservasi.html" class="navbar__link">Order & reservasi</a></li>
+					<li class="navbar__item"><a href="kontak.html" class="navbar__link navbar__link--active">Kontak</a></li>
+				</ul>
+                <button class="navbar__hamburger" aria-label="Buka menu">
+					<span class="navbar__hamburger-bar"></span>
+					<span class="navbar__hamburger-bar"></span> <!-- TYPO SUDAH DIPERBAIKI -->
+					<span class="navbar__hamburger-bar"></span>
+				</button>
+            </nav>
+        </div>
+    </header>
+    <!-- END Component: Header -->
+    
+    <main>
+        
+        <section class="hero">
+            <!-- Video Latar Belakang -->
+            <!-- PERBAIKAN: Menambahkan 'assets/' pada path poster video -->
+            <video class="hero__video" playsinline autoplay muted loop poster="assets/images/page-assets/hero-video-poster.jpg">
+                <!-- PERBAIKAN: Menambahkan 'assets/' pada path source video -->
+                <source src="assets/videos/hero-background.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <!-- Overlay untuk Keterbacaan Teks -->
+            <div class="hero__overlay"></div>
+            <!-- Konten Teks & Tombol CTA -->
+            <div class="hero__content">
+                <h1 class="hero__title">Saat Tradisi Bertemu Produktivitas. Selamat Datang di Merempah.</h1>
+                <p class="hero__subtitle">Oase urban di jantung Malang, tempat resep warisan nusantara menemani setiap gagasan dan kolaborasi Anda. 24/7.</p>
+                <div class="hero__cta-group">
+                    <a href="menu.html" class="btn btn--primary">Jelajahi Menu</a>
+                    <a href="#lokasi" class="btn btn--secondary">Temukan Kami</a>
+                </div>
+            </div>
+            <!-- Indikator Scroll Bawah -->
+            <div class="hero__scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+               <!-- Sesi 2: The Dilemma (Split-screen untuk Narasi Awal) -->
+        <section class="compromise section">
+            <div class="container compromise__grid">
+                <div class="compromise__text">
+                    <h2 class="section__title">Dilema Ruang Kerja Modern.</h2>
+                    <p>Kenyamanan fasilitas modern seringkali datang dengan sajian yang monoton. Sementara, keotentikan rasa terkadang mengorbankan suasana yang mendukung produktivitas. Mengapa harus ada kompromi?</p>
+                </div>
+                <div class="compromise__image">
+                    <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                    <img src="assets/images/page-assets/dilemma-concept.jpg" alt="Visualisasi perpaduan kafe modern yang dingin dan suasana Merempah yang hangat">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sesi 3: The Solution (Dengan Efek Parallax untuk Dampak Visual Maksimal) -->
+        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar latar belakang -->
+        <section class="solution section parallax-bg" style="background-image: url('assets/images/page-assets/solution-interior.jpg');">
+             <div class="container">
+                <div class="solution__text-box">
+                    <h2 class="section__title">Kami Menciptakan Kategori Baru.</h2>
+                    <p>Merempah bukan sekadar kafe atau kedai jamu. Kami adalah sebuah ekosistem. Dengan merevitalisasi resep warisan dan menyajikannya dalam ruang berfasilitas lengkap yang beroperasi 24/7, kami membangun destinasi di mana tradisi otentik mengakselerasi produktivitas modern Anda.</p>
+                </div>
+            </div>
+        </section>
+
+            <!-- Sesi 4: Penawaran Spesial (BARU - Mendorong Konversi) -->
+        <section class="promo section section--dark">
+            <div class="container promo__grid">
+                <div class="promo__image-wrapper">
+                    <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                    <img src="assets/images/menu-items/promo-paket-produktif.jpg" alt="Paket promo STMJ Authentic dan Tempe Mendoan hangat">
+                </div>
+                <div class="promo__text">
+                    <span class="promo__label">PROMO BULAN INI</span>
+                    <h2 class="promo__title">Paket Produktif: Energi & Inspirasi</h2>
+                    <p>Lembur atau kerja tugas? Nikmati kombinasi STMJ Authentic dan Tempe Mendoan gurih hanya dengan <strong>Rp 35.000,-</strong>. Tunjukkan penawaran ini kepada tim kami.</p>
+                    <!-- PERBAIKAN: Menambahkan rel="noopener noreferrer" untuk keamanan -->
+                    <a href="https://api.whatsapp.com/send?phone=628155800557&text=Halo%20Merempah%2C%20saya%20ingin%20klaim%20Promo%20Paket%20Produktif." target="_blank" rel="noopener noreferrer" class="btn btn--primary">Klaim via WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sesi 5: Intip Sajian Kami (Teaser Menu yang Lebih Meyakinkan) -->
+        <section class="offerings section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Cicipi Cerita di Balik Rasa.</h2>
+                    <p>Dari STMJ legendaris hingga Teh Talua yang creamy, setiap sajian kami adalah representasi kekayaan budaya nusantara, diracik untuk menemani hari Anda.</p>
+                </div>
+                <div class="offerings__grid">
+                    <!-- Kartu Produk 1 -->
+                    <div class="product-card">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-stmj.jpg" alt="Minuman STMJ hangat disajikan dalam cangkir batok kelapa yang otentik" class="product-card__image">
+                        <div class="product-card__body">
+                            <h4 class="product-card__title">STMJ Legendaris</h4>
+                        </div>
+                    </div>
+                    <!-- Kartu Produk 2 -->
+                    <div class="product-card">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/minuman-wedang-uwuh.jpg" alt="Wedang Uwuh dengan rempah-rempah asli seperti jahe dan kayu manis" class="product-card__image">
+                        <div class="product-card__body">
+                            <h4 class="product-card__title">Wedang Uwuh</h4>
+                        </div>
+                    </div>
+                    <!-- Kartu Produk 3 -->
+                    <div class="product-card">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/camilan-tempe-mendoan.jpg" alt="Tempe Mendoan hangat disajikan dengan sambal kecap pedas" class="product-card__image">
+                        <div class="product-card__body">
+                            <h4 class="product-card__title">Tempe Mendoan</h4>
+                        </div>
+                    </div>
+                    <!-- Kartu Produk 4 -->
+                    <div class="product-card">
+                        <!-- PERBAIKAN: Menambahkan 'assets/' pada path gambar -->
+                        <img src="assets/images/menu-items/kopi-tubruk-susu.jpg" alt="Kopi Tubruk Susu Murni Panas di gelas tinggi" class="product-card__image">
+                        <div class="product-card__body">
+                            <h4 class="product-card__title">Kopi Tubruk Susu Murni</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="offerings__cta">
+                    <a href="menu.html" class="btn btn--primary">Lihat Semua Menu & Harga</a>
+                </div>
+            </div>
+        </section>
+
+                <!-- Sesi 6: Lokasi (Informasi Fungsional Utama) -->
+        <section id="lokasi" class="location-snippet section section--dark">
+             <div class="container">
+                 <div class="section__header">
+                     <h2 class="section__title">Temukan Kami</h2>
+                     <p>Jl. Candi Trowulan Ruko Square No.7, Mojolangu, Kec. Lowokwaru, Kota Malang. Buka Setiap Hari, 24 Jam.</p>
+                     <a href="kontak.html" class="btn btn--secondary">Lihat Peta & Kontak Lengkap</a>
+                 </div>
+             </div>
+         </section>
+    </main>
+    
+    <!-- START Component: Footer (Konsisten di seluruh halaman) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Merempah. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <!-- END Component: Footer -->
+
+    <!-- Global Element: Sticky CTA (Untuk Konversi & Interaksi) -->
+    <!-- PERBAIKAN: Menambahkan rel="noopener noreferrer" untuk keamanan -->
+    <a href="https://api.whatsapp.com/send?phone=628155800557&text=Halo%20Merempah%2C%20saya%20ingin%20bertanya..." target="_blank" rel="noopener noreferrer" class="sticky-cta" aria-label="Hubungi kami via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+</body>
+</html>

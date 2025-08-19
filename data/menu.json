@@ -1,0 +1,86 @@
+[
+    {
+        "id": "stmj",
+        "name": "STMJ Authentic",
+        "price": 25000,
+        "category": "warisan",
+        "image": "minuman-stmj.jpg"
+    },
+    {
+        "id": "wedang_uwuh",
+        "name": "Wedang Uwuh",
+        "price": 20000,
+        "category": "warisan",
+        "image": "minuman-wedang-uwuh.jpg"
+    },
+    {
+        "id": "teh_talua",
+        "name": "Teh Talua",
+        "price": 22000,
+        "category": "warisan",
+        "image": "minuman-teh-talua.jpg"
+    },
+    {
+        "id": "bajigur",
+        "name": "Bajigur",
+        "price": 18000,
+        "category": "warisan",
+        "image": "minuman-bajigur.jpg"
+    },
+    {
+        "id": "beras_kencur",
+        "name": "Beras Kencur",
+        "price": 15000,
+        "category": "ramuan",
+        "image": "minuman-beras-kencur.jpg"
+    },
+    {
+        "id": "sinom",
+        "name": "Sinom",
+        "price": 15000,
+        "category": "ramuan",
+        "image": "minuman-sinom.jpg"
+    },
+    {
+        "id": "kopi_robusta",
+        "name": "Kopi Tubruk Robusta",
+        "price": 15000,
+        "category": "kopi",
+        "image": "kopi-tubruk-robusta.jpg"
+    },
+    {
+        "id": "kopi_susu_arabika",
+        "name": "Kopi Susu Arabika",
+        "price": 20000,
+        "category": "kopi",
+        "image": "kopi-susu-arabika.jpg"
+    },
+    {
+        "id": "pecel",
+        "name": "Pecel",
+        "price": 18000,
+        "category": "pendamping",
+        "image": "makanan-pecel.jpg"
+    },
+    {
+        "id": "tahu_telur",
+        "name": "Tahu Telur",
+        "price": 20000,
+        "category": "pendamping",
+        "image": "makanan-tahu-telur.jpg"
+    },
+    {
+        "id": "tempe_mendoan",
+        "name": "Tempe Mendoan",
+        "price": 15000,
+        "category": "pendamping",
+        "image": "camilan-tempe-mendoan.jpg"
+    },
+    {
+        "id": "singkong_keju",
+        "name": "Singkong Keju",
+        "price": 18000,
+        "category": "pendamping",
+        "image": "camilan-singkong-keju.jpg"
+    }
+]

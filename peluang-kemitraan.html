@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluang Kemitraan - Tumbuh Bersama Merempah</title>
+    <meta name="description" content="Jadilah pelopor di kota Anda. Pelajari peluang waralaba dan kemitraan strategis dengan Merempah, sebuah kategori baru di industri F&B dengan model bisnis yang teruji.">
+    
+    <!-- Google Fonts, Font Awesome, dan Stylesheets (Sama seperti sebelumnya) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Chart.js untuk Infografis (BARU) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <!-- JavaScript dengan Defer -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- START Component: Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">MEREMPAH</a>
+                <ul class="navbar__menu">
+                    <!-- Nav items... -->
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="cerita-kami.html" class="navbar__link">Cerita Kami</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="other-product.html" class="navbar__link">Produk Retail</a></li>
+                    <li class="navbar__item"><a href="peluang-kemitraan.html" class="navbar__link">Kemitraan</a></li>
+                    <li class="navbar__item"><a href="order-reservasi.html" class="navbar__link">Order & reservasi</a></li>
+					<li class="navbar__item"><a href="kontak.html" class="navbar__link navbar__link--active">Kontak</a></li>
+				</ul>
+                <button class="navbar__hamburger" aria-label="Buka menu">
+					<span class="navbar__hamburger-bar"></span>
+					<span class="navbar__hamburger-bar"></span> <!-- TYPO SUDAH DIPERBAIKI -->
+					<span class="navbar__hamburger-bar"></span>
+				</button>
+            </nav>
+        </div>
+    </header>
+    <!-- END Component: Header -->
+
+    <main>
+    <!-- Page Hero Section (Lebih Fokus pada Investor) -->
+    <section class="page-hero" style="background-image: url('assets/images/page-assets/partnership-hero-blueprint.jpg');">
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">Jadilah Pelopor. Bukan Pengikut.</h1>
+            <p class="page-hero__subtitle">Pimpin pasar minuman rempah modern di kota Anda dengan model bisnis yang teruji dan potensi tak terbatas.</p>
+        </div>
+    </section>
+
+    <!-- Founders' Invitation Section (BARU - Membangun Koneksi Personal) -->
+    <section class="founders-invitation section">
+        <div class="container container--narrow">
+            <div class="founders-invitation__content">
+                <div class="founders-invitation__photos">
+                    <img src="assets/images/founders/founder-aziz.jpg" alt="Abdul Aziz Albar">
+                    <img src="assets/images/founders/founder-danu.jpg" alt="Danu Ferdianto">
+                </div>
+                <h2 class="section__title">Sebuah Undangan dari Kami, Para Pendiri</h2>
+                <p class="founders-invitation__text">"Kami tidak sedang mencari franchisee. Kami mencari rekan seperjuangan. Individu yang memiliki visi yang sama, yang resah dengan kompromi di pasar, dan yang percaya bahwa warisan budaya adalah masa depan. Halaman ini adalah awal dari percakapan kita. Jika Anda merasakan panggilan yang sama untuk menjadi pelopor, mari kita bangun warisan ini bersama."</p>
+                <p class="founders-invitation__signature">- Abdul Aziz Albar & Danu Ferdianto</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Opportunity Section (BARU - Fokus pada data kuantitatif) -->
+    <section class="opportunity section section--dark">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Peluang di Balik Kategori Baru</h2>
+                <p>Anda tidak berinvestasi pada sebuah kafe. Anda mengklaim posisi terdepan dalam sebuah pasar yang besar, berkembang, dan belum tergarap oleh pemain besar.</p>
+            </div>
+            <!-- Infographics for Market Potential -->
+            <div class="infographics__grid">
+                <div class="infographic-card">
+                    <div class="infographic-card__icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="infographic-card__value" data-value="11.3">0 T</div>
+                    <h3 class="infographic-card__title">Nilai Pasar Jamu</h3>
+                    <p class="infographic-card__text">Di Indonesia (2023), menunjukkan permintaan masif yang sudah ada.</p>
+                </div>
+                <div class="infographic-card">
+                    <div class="infographic-card__icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="infographic-card__value" data-value="8">0%</div>
+                    <h3 class="infographic-card__title">Proyeksi Pertumbuhan (CAGR)</h3>
+                    <p class="infographic-card__text">Didorong oleh meningkatnya kesadaran akan gaya hidup sehat.</p>
+                </div>
+                <div class="infographic-card">
+                    <div class="infographic-card__icon"><i class="fas fa-users"></i></div>
+                    <div class="infographic-card__value" data-value="78">0%</div>
+                    <h3 class="infographic-card__title">Konsumen Sadar Kesehatan</h3>
+                    <p class="infographic-card__text">Secara aktif mencari alternatif yang lebih sehat dalam keputusan pembelian mereka.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proven Model Section (BARU - Menampilkan data performa) -->
+    <section class="proven-model section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Mesin Profit yang Telah Teruji</h2>
+                <p>Visi kami didukung oleh model bisnis yang ramping dan sangat efisien, dibuktikan oleh performa di outlet perdana kami di Malang.</p>
+            </div>
+            <div class="proven-model__grid">
+                <!-- Data Chart -->
+                <div class="proven-model__chart-container">
+                    <!-- Canvas untuk Chart.js -->
+                    <canvas id="profitabilityChart"></canvas>
+                </div>
+                <!-- Key Financial Metrics -->
+                <div class="proven-model__metrics">
+                    <div class="metric-item">
+                        <h3 class="metric-item__value">29%</h3>
+                        <p class="metric-item__label">Target Laba Bersih (Net Profit Margin)</p>
+                        <p class="metric-item__desc">Angka yang sangat sehat di industri F&B, menunjukkan efisiensi operasional dan kekuatan harga jual.</p>
+                    </div>
+                    <div class="metric-item">
+                        <h3 class="metric-item__value">18-24</h3>
+                        <p class="metric-item__label">Target Bulan untuk Balik Modal (BEP)</p>
+                        <p class="metric-item__desc">Proyeksi pengembalian investasi yang cepat, didukung oleh biaya operasional yang ramping dan permintaan pasar yang kuat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Model & Support Section (BARU - Menjelaskan proses secara transparan) -->
+    <section class="partnership-support section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Model Kemitraan & Dukungan Penuh Kami</h2>
+                <p>Kami menyebutnya kemitraan karena kami akan mendampingi Anda di setiap langkah, dari perencanaan hingga outlet Anda bertumbuh dan profitabel.</p>
+            </div>
+            <div class="support-timeline">
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                    <div class="timeline-step__number">1</div>
+                    <div class="timeline-step__content">
+                        <h3 class="timeline-step__title">Fase Perencanaan & Seleksi</h3>
+                        <p>Kami membantu Anda memulai dengan fondasi yang kuat, termasuk survei dan analisis kelayakan lokasi, penyusunan proyeksi finansial, dan finalisasi perjanjian kemitraan yang transparan.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="timeline-step">
+                    <div class="timeline-step__number">2</div>
+                    <div class="timeline-step__content">
+                        <h3 class="timeline-step__title">Fase Pembangunan & Pelatihan</h3>
+                        <p>Tim kami menyediakan panduan desain outlet sesuai standar Merempah, supervisi konstruksi, serta program pelatihan komprehensif untuk Anda dan tim inti (Rempahista & Manajer).</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                    <div class="timeline-step__number">3</div>
+                    <div class="timeline-step__content">
+                        <h3 class="timeline-step__title">Fase Peluncuran & Pemasaran</h3>
+                        <p>Kami tidak akan membiarkan Anda sendirian. Kami menyediakan dukungan penuh untuk grand opening, termasuk strategi pemasaran lokal dan materi promosi awal untuk menciptakan ledakan awareness.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="timeline-step">
+                    <div class="timeline-step__number">4</div>
+                    <div class="timeline-step__content">
+                        <h3 class="timeline-step__title">Fase Operasional & Pertumbuhan</h3>
+                        <p>Dukungan kami terus berlanjut melalui pasokan bahan baku kunci terpusat, audit kualitas berkala, inovasi menu nasional, dan sesi konsultasi bisnis untuk memastikan pertumbuhan yang berkelanjutan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Form Section (Dioptimalkan untuk Konversi) -->
+    <section class="partnership-form-section section section--dark">
+        <div class="container container--narrow">
+            <div class="section__header">
+                <h2 class="section__title">Siap Memulai Percakapan?</h2>
+                <p>Mengisi data di bawah ini adalah langkah pertama tanpa komitmen. Tim kemitraan kami akan menghubungi Anda secara personal untuk sesi perkenalan 1-on-1, di mana kami akan menjawab semua pertanyaan Anda secara mendalam.</p>
+            </div>
+            <form class="form" id="partnership-form">
+                <div class="form__grid">
+                    <div class="form__group">
+                        <input type="text" id="name" name="name" class="form__input" placeholder="Nama Lengkap" required>
+                        <label for="name" class="form__label">Nama Lengkap</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" id="whatsapp" name="whatsapp" class="form__input" placeholder="Nomor WhatsApp" required>
+                        <label for="whatsapp" class="form__label">Nomor WhatsApp</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" class="form__input" placeholder="Alamat Email" required>
+                        <label for="email" class="form__label">Alamat Email</label>
+                    </div>
+                    <div class="form__group">
+                        <select id="topic" name="topic" class="form__input" required>
+                            <option value="" disabled selected>Pilih Topik Diskusi...</option>
+                            <option value="Informasi Waralaba">Informasi Waralaba Detail</option>
+                            <option value="Proyeksi Keuangan">Diskusi Proyeksi Keuangan</option>
+                            <option value="Ketersediaan Lokasi">Tanya Ketersediaan Lokasi</option>
+                            <option value="Kemitraan Lainnya">Kemitraan Strategis Lainnya</option>
+                        </select>
+                        <label for="topic" class="form__label">Pilihan Topik</label>
+                    </div>
+                    <div class="form__group form__group--full-width">
+                        <textarea id="message" name="message" class="form__input" placeholder="Perkenalkan diri Anda & kota yang Anda minati (Opsional)" rows="4"></textarea>
+                        <label for="message" class="form__label">Pesan Tambahan</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--primary form__submit-btn">Mulai Diskusi Kemitraan</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+    <!-- START Component: Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Merempah. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <!-- END Component: Footer -->
+    
+</body>
+</html>
