@@ -55,7 +55,14 @@
         "category": "kopi",
         "image": "kopi-susu-arabika.jpg"
     },
-    {
+	{
+        "id": "kopi_tubruk_susu_segar",
+        "name": "Kopi Tubruk Susu Segar",
+        "price": 20000,
+        "category": "kopi",
+        "image": "kopi_tubruk_susu_segar.jpg"
+    },
+	{
         "id": "pecel",
         "name": "Pecel",
         "price": 18000,
